@@ -33,7 +33,7 @@
     e.preventDefault();
   
     const telegramBotToken = '6022677082:AAEmelFk4w3pCJf1-J4kL5oy9mi_C2XBssQ';
-    const chatId = '469101772';
+    const chatId = '5900306776';
   
     const text = `
     НОВА ЗАЯВКА 
@@ -64,4 +64,3 @@
     }
   };
   </script>
-  
