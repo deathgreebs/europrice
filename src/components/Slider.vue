@@ -9,7 +9,7 @@
   <div class="slider relative pb-[200px] z-10" v-if="slides.length > 0" ref="sliderRef">
     <div class="slider-container" :style="{ transform: `translateX(${-currentIndex * 100}%)` }">
       <div class="slider-item flex justify-around flex-wrap" v-for="(slide, index) in slides" :key="index">
-        <img class="max-w-[150px] max-h-[100px] h-[70px] py-4 lg:py-0" v-for="(item, itemIndex) in slide.items" :src="item.image" :alt="item.alt" :key="itemIndex">
+        <img class="max-w-1/2 max-h-[100px] h-[70px] py-4 lg:py-0" v-for="(item, itemIndex) in slide.items" :src="item.image" :alt="item.alt" :key="itemIndex">
       </div>
     </div>
   </div>
@@ -23,7 +23,6 @@ import image36 from '../assets/img/logos/image 36.png';
 import image37 from '../assets/img/logos/image 37.png';
 import image39 from '../assets/img/logos/image 39.png';
 import image72 from '../assets/img/logos/image 72.png';
-import image41 from '../assets/img/logos/image 41.png';
 import image42 from '../assets/img/logos/image 42.png';
 import image50 from '../assets/img/logos/image 50.svg';
 import image51 from '../assets/img/logos/image 51.png';
@@ -35,7 +34,6 @@ import image75 from '../assets/img/logos/image 75.png';
 import image80 from '../assets/img/logos/80.png';
 import image81 from '../assets/img/logos/81.png';
 import image83 from '../assets/img/logos/83.png';
-import image84 from '../assets/img/logos/84.png';
 import image85 from '../assets/img/logos/85.png';
 import image86 from '../assets/img/logos/86.png';
 import image87 from '../assets/img/logos/87.png';
@@ -47,12 +45,11 @@ import image104 from '../assets/img/logos/104.png';
 import image105 from '../assets/img/logos/105.png';
 import image106 from '../assets/img/logos/106.png';
 import image107 from '../assets/img/logos/107.png';
-
+import image108 from '../assets/img/logos/cimbalak-logo.png';
 
 const items = ref([
   [
     { image: image31, alt: 'Картинка 1' },
-    { image: image41, alt: 'Картинка 2' },
     { image: image32, alt: 'Картинка 3' },
     { image: image50, alt: 'Картинка 4' },
     { image: image51, alt: 'Картинка 5' },
@@ -72,10 +69,8 @@ const items = ref([
     { image: image80, alt: 'Картинка 6' },
     { image: image81, alt: 'Картинка 7' },
     { image: image83, alt: 'Картинка 8' },
-    { image: image84, alt: 'Картинка 9' },
     { image: image85, alt: 'Картинка 10' },
     { image: image86, alt: 'Картинка 10' },
-    { image: image87, alt: 'Картинка 10' },
   ],
   [
     { image: image87, alt: 'Картинка 6' },
@@ -87,6 +82,7 @@ const items = ref([
     { image: image105, alt: 'Картинка 10' },
     { image: image106, alt: 'Картинка 10' },
     { image: image107, alt: 'Картинка 10' },
+    { image: image108, alt: 'Картинка 10' },
   ],
 ]);
 

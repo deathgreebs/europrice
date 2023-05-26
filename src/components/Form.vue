@@ -5,7 +5,7 @@
             <div class="relative z-10 uppercase mb-4 font-montserrat text-[25px] sm:text-[32px] font-bold">{{ $t('form-title') }}</div>
             <div class="relative z-10 mb-6 text-[15px] sm:text-[20px] font-open-sans">{{ $t('form-subtitle') }}</div>
             <div class="relative z-10 flex items-center mb-2"><span><img src="../assets/img/icons/post.svg" alt=""></span><a href="" class="ml-2">euprice.ua@gmail.com</a></div>
-            <div class="relative z-10 flex items-center"><span><img src="../assets/img/icons/tel.svg" alt=""></span><a href="tel:+380508081732" class="ml-2">+38 (050) 808 17 32</a></div>
+            <div class="relative z-10 flex items-center"><span><img src="../assets/img/icons/tel.svg" alt=""></span><a href="tel:+380954636143" class="ml-2">+38 (095) 463 61 43</a></div>
         </div>
     <form @submit="handleSubmit" class="flex flex-col w-full lg:w-1/3">
         <div class="flex w-full">

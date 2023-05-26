@@ -14,7 +14,7 @@
         <div class="flex font-montserrat font-medium mr-[24px] sm:items-center">
           <span class="mr-[10px] text-[#fff] sm:mr[5px] lg:mr[10px] h-min"><img class="sm:w-3/4 lg:w-full" src="../assets/img/icons/tel.svg" alt=""></span>
           <a href="tel:+380508081732" class="text-[#fff] sm:text-[10px] lg:text-[14px]">
-            +38 (050) 808 17 32
+            +38 (095) 463 61 43
           </a>
         </div> 
       </div>

@@ -6,7 +6,7 @@
     <Company />
     <Slider />
     <List />
-    <Feedbacks />
+    <!-- <Feedbacks /> -->
     <Form />
   </div>
   <Footer />
