@@ -1,20 +1,19 @@
 <template>
   <div id="target-section-2" class="flex flex-col items-center relative mt-[200px] pb-[60px]">
-        <div class="lg:text-[32px] sm:text-[25px] text-[20px] font-montserrat font-bold uppercase">{{ $t('distribution') }}</div>
+    <div class="lg:text-[32px] sm:text-[25px] text-[20px] font-montserrat font-bold uppercase">{{ $t('distribution') }}</div>
     <div class="text-[15px] lg:text-[20px] font-open-sans text-center max-w-[800px] z-10">
-        {{ $t('distribution-text') }}
+      {{ $t('distribution-text') }}
     </div>
     <img class="absolute blur-lg z-[1]" src="../assets/img/balls.png" alt="">
-    </div>
+  </div>
   <div class="slider relative pb-[200px] z-10" v-if="slides.length > 0" ref="sliderRef">
     <div class="slider-container" :style="{ transform: `translateX(${-currentIndex * 100}%)` }">
       <div class="slider-item flex justify-around flex-wrap" v-for="(slide, index) in slides" :key="index">
-        <img class="max-h-[100px] py-2 my-2 mx-2 px-2 lg:py-0" v-for="(item, itemIndex) in slide.items" :src="item.image" :alt="item.alt" :key="itemIndex">
+        <img class="w-[70px] h-[40px] md:w-[100px] md:h-[70px] py-2 my-2 mx-2 px-2 lg:py-0" v-for="(item, itemIndex) in slide.items" :src="item.resizedImage" :alt="item.alt" :key="itemIndex">
       </div>
     </div>
   </div>
 </template>
-
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue';
 import image1 from '../assets/img/logos/k-lavazza.png';
@@ -109,7 +108,6 @@ function stopAutoSlide() {
   clearInterval(slideInterval);
 }
 
-// Создайте вычисляемое свойство slides, которое будет группировать картинки по слайдам
 const slides = ref([]);
 
 function createSlides() {
@@ -117,15 +115,51 @@ function createSlides() {
   const numSlides = items.value.length;
 
   for (let i = 0; i < numSlides; i++) {
-    const slideItems = items.value[i];
+    const slideItems = items.value[i].map((item) => {
+      return {
+        image: item.image,
+        alt: item.alt,
+        resizedImage: null,
+      };
+    });
     slides.value.push({ items: slideItems });
   }
 }
 
-// Вызовите функцию createSlides, чтобы сформировать слайды из исходных картинок
 createSlides();
-</script>
 
+onMounted(async () => {
+  await resizeImages();
+});
+
+async function resizeImages() {
+  for (let i = 0; i < slides.value.length; i++) {
+    for (let j = 0; j < slides.value[i].items.length; j++) {
+      const item = slides.value[i].items[j];
+      const resizedImage = await resizeImage(item.image);
+      item.resizedImage = resizedImage;
+    }
+  }
+}
+
+function resizeImage(image) {
+  const desiredWidth = 100;
+  const desiredHeight = 70;
+
+  return new Promise((resolve) => {
+    const img = new Image();
+    img.src = image;
+    img.onload = () => {
+      const canvas = document.createElement('canvas');
+      const ctx = canvas.getContext('2d');
+      canvas.width = desiredWidth;
+      canvas.height = desiredHeight;
+      ctx.drawImage(img, 0, 0, desiredWidth, desiredHeight);
+      resolve(canvas.toDataURL());
+    };
+  });
+}
+</script>
 <style>
 .slider {
   width: 100%;
