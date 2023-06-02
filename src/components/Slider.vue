@@ -9,41 +9,42 @@
   <div class="slider relative pb-[200px] z-10" v-if="slides.length > 0" ref="sliderRef">
     <div class="slider-container" :style="{ transform: `translateX(${-currentIndex * 100}%)` }">
       <div class="slider-item flex justify-around flex-wrap" v-for="(slide, index) in slides" :key="index">
-        <img class="w-[70px] h-[40px] md:w-[100px] md:h-[70px] py-2 my-2 mx-2 px-2 lg:py-0" v-for="(item, itemIndex) in slide.items" :src="item.resizedImage" :alt="item.alt" :key="itemIndex">
+        <!-- <img class="w-[70px] h-[40px] md:w-[100px] md:h-[70px] py-2 my-2 mx-2 px-2 lg:py-0" v-for="(item, itemIndex) in slide.items" :src="item.resizedImage" :alt="item.alt" :key="itemIndex"> -->
+        <img class="w-[70px] h-[50px] md:w-[100px] md:h-[70px] py-2 my-2 mx-2 px-2 lg:py-0" v-for="(item, itemIndex) in slide.items" :src="item.resizedImage" :alt="item.alt" :key="itemIndex">
       </div>
     </div>
   </div>
 </template>
 <script setup>
 import { ref, onMounted, onBeforeUnmount } from 'vue';
-import image1 from '../assets/img/logos/k-lavazza.png';
-import image2 from '../assets/img/logos/k-bellarom.png';
-import image3 from '../assets/img/logos/k-alvorada.png';
-import image4 from '../assets/img/logos/k-J.J.Darboven.png';
-import image5 from '../assets/img/logos/k-tchibo.png';
-import image6 from '../assets/img/logos/k-movenpick.png';
-import image7 from '../assets/img/logos/k-dallmayr.png';
-import image8 from '../assets/img/logos/k-melitta.png';
-import image11 from '../assets/img/logos/h-pg.png';
-import image22 from '../assets/img/logos/h-dm.png';
-import image33 from '../assets/img/logos/h-astonish.png';
-import image44 from '../assets/img/logos/h-soft.png';
-import image55 from '../assets/img/logos/h-chanteclair.png';
-import image66 from '../assets/img/logos/h-passiongold.png';
-import image111 from '../assets/img/logos/s-kinder.png';
-import image222 from '../assets/img/logos/s-milka.png';
-import image333 from '../assets/img/logos/s-orion.png';
-import image444 from '../assets/img/logos/s-nestle.png';
-import image555 from '../assets/img/logos/s-ferrero.png';
-import image1111 from '../assets/img/logos/b-alesto.png';
-import image2222 from '../assets/img/logos/b-mlekpol.png';
-import image3333 from '../assets/img/logos/b-mlekovita.png';
-import image4444 from '../assets/img/logos/b-vijofel.png';
-import image5555 from '../assets/img/logos/b-kania.png';
-import image6666 from '../assets/img/logos/b-monini.png';
-import image7777 from '../assets/img/logos/b-barilla.png';
-import image8888 from '../assets/img/logos/b-mk.png';
-import image9999 from '../assets/img/logos/b-cimbalak.png';
+import image1 from '../assets/img/logos/image 31.png';  
+import image2 from '../assets/img/logos/image 62.png';
+import image3 from '../assets/img/logos/image 32.png';
+import image4 from '../assets/img/logos/image 64.png';
+import image5 from '../assets/img/logos/Vector.svg';
+import image6 from '../assets/img/logos/image 39.png';
+import image7 from '../assets/img/logos/image 63.png';
+import image8 from '../assets/img/logos/image 37.png';
+import image11 from '../assets/img/logos/image 41.png';
+import image22 from '../assets/img/logos/image 40.png';
+import image33 from '../assets/img/logos/Astonish_old 1.png';
+import image44 from '../assets/img/logos/h-soft 1.png';
+import image55 from '../assets/img/logos/image 60.png';
+// import image66 from '../assets/img/logos/h-passiongold.png';
+import image111 from '../assets/img/logos/image 42.png';
+import image222 from '../assets/img/logos/image 43.png';
+import image333 from '../assets/img/logos/image 55.png';
+import image444 from '../assets/img/logos/image 44.png';
+import image555 from '../assets/img/logos/image 54.png';
+import image1111 from '../assets/img/logos/image 46.png';
+import image2222 from '../assets/img/logos/image 57.png';
+import image3333 from '../assets/img/logos/image 56.png';
+import image4444 from '../assets/img/logos/image 59.png';
+// import image5555 from '../assets/img/logos/b-kania.png';
+import image6666 from '../assets/img/logos/image 58.png';
+import image7777 from '../assets/img/logos/image 51.png';
+// import image8888 from '../assets/img/logos/b-mk.png';
+// import image9999 from '../assets/img/logos/b-cimbalak.png';
 
 
 const items = ref([
@@ -63,7 +64,7 @@ const items = ref([
     { image: image33, alt: 'Картинка 4' },
     { image: image44, alt: 'Картинка 5' },
     { image: image55, alt: 'Картинка 5' },
-    { image: image66, alt: 'Картинка 5' },
+    // { image: image66, alt: 'Картинка 5' },
   ],
   [
     { image: image111, alt: 'Картинка 1' },
@@ -77,11 +78,11 @@ const items = ref([
     { image: image2222, alt: 'Картинка 3' },
     { image: image3333, alt: 'Картинка 4' },
     { image: image4444, alt: 'Картинка 5' },
-    { image: image5555, alt: 'Картинка 5' },
+    // { image: image5555, alt: 'Картинка 5' },
     { image: image6666, alt: 'Картинка 5' },
     { image: image7777, alt: 'Картинка 5' },
-    { image: image8888, alt: 'Картинка 5' },
-    { image: image9999, alt: 'Картинка 5' },
+    // { image: image8888, alt: 'Картинка 5' },
+    // { image: image9999, alt: 'Картинка 5' },
   ],
 ]);
 
