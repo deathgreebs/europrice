@@ -14,10 +14,7 @@
                     class="mt-[20px] lg:mt-[40px] flex items-center smooth-scroll">
                     {{ $t('main-btn') }}
                     <span class="ml-[13px]">
-                        <img class="rotate-[25deg] transition ease-in-out delay-300" 
-                        :class="{ 'rotate-45': isHovered }" 
-                        width="18" height="18" 
-                        src="../assets/img/icons/spiner.svg" alt="">
+                      <img src="../assets/img/icons/post-2.svg" alt="">
                     </span>
                 </Btn>
         </div>
