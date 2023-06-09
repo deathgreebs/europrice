@@ -4,6 +4,9 @@
     <Main />
     <Stats />
     <Company />
+  </div>
+    <Shop />
+    <div class="container mx-auto">
     <Slider />
     <List />
     <!-- <Feedbacks /> -->
@@ -20,6 +23,7 @@ import Company from './components/Company.vue';
 import Slider from './components/Slider.vue';
 import List from './components/List.vue';
 import Feedbacks from './components/Feedbacks.vue';
+import Shop from './components/Shop.vue';
 import Form from './components/Form.vue';
 import Footer from './components/Footer.vue';
 import { ref, provide } from 'vue';
