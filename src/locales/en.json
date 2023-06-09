@@ -31,6 +31,9 @@
       "form-tel": "tel",
       "form-email": "email",
       "form-msg": "Message (not required)",
-      "form-btn": "Send my message"
+      "form-btn": "Send my message",
+      "shop-text": "visit",
+      "shop-text2": "it is convenient!",
+      "shop-btn": "GO TO THE STORE"
   }
   
