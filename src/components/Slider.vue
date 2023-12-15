@@ -1,7 +1,7 @@
 <template>
   <div id="target-section-2" class="flex flex-col items-center relative mt-[200px] pb-[60px]">
-    <div class="lg:text-[32px] sm:text-[25px] text-[20px] font-montserrat font-bold uppercase">{{ $t('distribution') }}</div>
-    <div class="text-[15px] lg:text-[20px] font-open-sans text-center max-w-[800px] z-10">
+    <div class="lg:text-[32px] text-white sm:text-[25px] text-[20px] font-montserrat font-bold uppercase">{{ $t('distribution') }}</div>
+    <div class="text-[15px] lg:text-[20px] text-white font-open-sans text-center max-w-[800px] z-10">
       {{ $t('distribution-text') }}
     </div>
     <img class="absolute blur-lg z-[1]" src="../assets/img/balls.png" alt="">

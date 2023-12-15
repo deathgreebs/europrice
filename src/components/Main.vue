@@ -1,17 +1,17 @@
 <template>
     <div class="flex flex-col px-12 md:p-0 sm:flex-row mt-[60px] lg:mt-[130px] justify-between container">
         <div :class="{ 'fade-in': showText }" class="order-2 sm:order-1">
-            <div class="max-w-[600px] text-montserrat text-[25px] lg:text-[54px] font-bold leading-[26px] lg:leading-[66px]">
+            <div class="max-w-[600px] text-montserrat text-[25px] lg:text-[54px] font-bold leading-[26px] lg:leading-[66px] text-white">
                 {{ $t('main-title') }}
             </div>
-            <div class="max-w-[500px] text-open-sans text-[15px] lg:text-[20px] leading-[17px] lg:leading-[27px] mt-[20px]">
+            <div class="max-w-[500px] text-open-sans text-[15px] lg:text-[20px] leading-[17px] lg:leading-[27px] mt-[20px] text-white">
                 {{ $t('main-subtitle') }}
             </div>
                 <Btn 
                     @click="scrollToTarget3"
                     @mouseover="rotateImage(true)" 
                     @mouseleave="rotateImage(false)" 
-                    class="mt-[20px] lg:mt-[40px] flex items-center smooth-scroll">
+                    class="mt-[20px] lg:mt-[40px] flex items-center smooth-scroll text-white">
                     {{ $t('main-btn') }}
                     <span class="ml-[13px]">
                       <img src="../assets/img/icons/post-2.svg" alt="">

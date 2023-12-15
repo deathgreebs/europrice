@@ -6,9 +6,13 @@ module.exports = {
   ],
   theme: {
     extend: {
-      backgroundColor: {
-        'html': '#3b82f680',
+      linearGradientColors: {
+        'html': ['#00A1AB', '#020112'],
       },
+      backgroundImage: theme => ({
+        'html': `linear-gradient(to top, ${theme('linearGradientColors.html').join(', ')})`,
+      }),
+      backgroundColor: theme => theme('colors'),
       fontFamily: {
         'pt-sans-caption': ['PT Sans Caption', 'sans-serif'],
         'roboto-condensed': ['Roboto Condensed', 'sans-serif'],

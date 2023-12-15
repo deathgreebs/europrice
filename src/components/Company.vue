@@ -6,8 +6,8 @@
             <img class="relative z-10 md:absolute w-[350px] lg:w-auto sm:right-auto" src="../assets/img/company.png" alt="">
         </div>
         <div class="max-w-[500px] p-4 md:w-[680px] md:mt-0 mt-8">
-            <div class="font-montserrat font-bold text-[20px] lg:text-[32px] sm:text-[25px] mb-[30px] z-10 uppercase">{{ $t('about') }}</div>
-            <p class="z-10 font-open-sans sm:text-[15px] lg:text-[20px]">{{ $t('c-descr') }}</p>
+            <div class="font-montserrat font-bold text-[20px] lg:text-[32px] sm:text-[25px] mb-[30px] z-10 uppercase text-white">{{ $t('about') }}</div>
+            <p class="z-10 font-open-sans sm:text-[15px] lg:text-[20px] text-white">{{ $t('c-descr') }}</p>
         </div>
     </div>  
 </template>
