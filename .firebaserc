@@ -1,5 +1,8 @@
 {
   "projects": {
-    "default": "europrice-b268b"
-  }
+    "default": "yima-82cda",
+    "yima-landing": "yima-82cda"
+  },
+  "targets": {},
+  "etags": {}
 }
