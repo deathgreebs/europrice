@@ -1,7 +1,8 @@
 {
   "projects": {
-    "default": "yima-82cda",
-    "yima-landing": "yima-82cda"
+    "default": "europrice-56ce6",
+    "yima-landing": "yima-82cda",
+    "eurpprice-landing-commercial": "europrice-56ce6"
   },
   "targets": {},
   "etags": {}
